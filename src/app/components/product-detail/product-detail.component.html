@@ -1,0 +1,44 @@
+<table class="table table-bordered table-striped table-hover">
+    <thead>
+      <tr>
+        <th class="text-center">Purchase Date</th>
+        <th class="text-center">Invoice</th>
+        <th class="text-center">Customer Root</th>
+        <th class="text-center">Customer Leaf</th>
+        <th class="text-center">Product Description</th>
+        <th class="text-center">Pack Size</th>
+        <th class="text-center">Until Type</th>
+        <th class="text-center">Category</th>
+        <th class="text-center">Distributor Root</th>
+        <th class="text-center">Distributor Leaf</th>
+        <th class="text-center">Manafacturer</th>
+        <th class="text-center">Quantity</th>
+        <th class="text-center">Price</th>
+        <th class="text-center">Total</th>
+
+
+        <th class="text-center">&nbsp;</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products">
+        <td>{{product.purchaseDate}}</td>
+        <td>{{product.invoice }}</td>
+        <td>{{product.customerRoot}}</td>
+        <td>{{product.customerLeaf}}</td>
+        <td>{{product.productDescription}}</td>
+        <td>{{product.packSize}}</td>
+        <td>{{product.untilType}}</td>
+        <td>{{product.category}}</td>
+        <td>{{product.distributorRoot}}</td>
+        <td>{{product.manafacturer}}</td>
+        <td>{{product.quantity}}</td>
+        <td>{{product.price}}</td>
+        <td>{{product.total}}</td>
+          <!-- <td>
+            <button type="button" class="btn btn-danger btn-sm" (click)="removeRequerimiento(requerimiento)">Delete</button>
+          </td> -->
+      </tr>
+    </tbody>
+  </table>
+

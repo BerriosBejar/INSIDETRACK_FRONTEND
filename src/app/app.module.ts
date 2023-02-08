@@ -8,6 +8,12 @@ import { AppComponent } from './app.component';
 //import { ProductServicesService } from './services/product-services/product-services';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 import { ProductServicesService } from './services/product-services.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { MatTableModule } from '@angular/material/table';
+import {MatFormFieldModule} from '@angular/material/form-field'; 
+import { MatSortModule } from '@angular/material/sort';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
@@ -19,7 +25,12 @@ import { ProductServicesService } from './services/product-services.service';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatTableModule,
+    MatFormFieldModule,
+    MatSortModule,
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

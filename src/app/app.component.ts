@@ -18,5 +18,6 @@ export class AppComponent {
   
   ngOnInit(): void{
     this.productosService.getProducts().subscribe((dato:any)=>this.products=dato);
+    console.log(this.products);
   }
 }

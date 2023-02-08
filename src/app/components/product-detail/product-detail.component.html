@@ -1,7 +1,121 @@
-<table class="table table-bordered table-striped table-hover">
+<div class="wrapper">
+  <div class="input" class="center-block">
+    <input type="text" (keyup)="applyFilter($event)"  placeholder="Quantity">
+  </div>
+</div>
+
+<div class="mat-elevation-z8">
+<table mat-table [dataSource]="dataSource" matSort>
+
+  <ng-container matColumnDef="purchaseDate">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by number">
+      Purchase Date
+    </th>
+    <td mat-cell *matCellDef="let element"> {{element.purchaseDate}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="invoice">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by number">
+      Invoice
+    </th>
+    <td mat-cell *matCellDef="let element"> {{element.invoice}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="customerRoot">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by number">
+      Customer
+    </th>
+    <td mat-cell *matCellDef="let element"> {{element.customerRoot}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="customerLeaf">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by number">
+      Customer Leaf
+    </th>
+    <td mat-cell *matCellDef="let element"> {{element.customerLeaf}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="productDescription">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by number">
+      Product Description
+    </th>
+    <td mat-cell *matCellDef="let element"> {{element.productDescription}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="packSize">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by number">
+      Pack Size
+    </th>
+    <td mat-cell *matCellDef="let element"> {{element.packSize}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="unitType">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by number">
+      Unit Type
+    </th>
+    <td mat-cell *matCellDef="let element"> {{element.unitType}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="category">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by number">
+      Category
+    </th>
+    <td mat-cell *matCellDef="let element"> {{element.category}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="distributorRoot">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by number">
+      Distributor Root
+    </th>
+    <td mat-cell *matCellDef="let element"> {{element.distributorRoot}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="distributorLeaf">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by number">
+      Distributor Leaf
+    </th>
+    <td mat-cell *matCellDef="let element"> {{element.distributorLeaf}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="manafacturer">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by number">
+      Manafacturer
+    </th>
+    <td mat-cell *matCellDef="let element"> {{element.manafacturer}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="quantity">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by number">
+      Quantity
+    </th>
+    <td mat-cell *matCellDef="let element"> {{element.quantity}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="price">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by number">
+      Price
+    </th>
+    <td mat-cell *matCellDef="let element"> {{element.price}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="total">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by number">
+      Total
+    </th>
+    <td mat-cell *matCellDef="let element"> {{element.total}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+<mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+</div>
+
+
+<!-- <table class="table table-bordered table-striped table-hover">
     <thead>
       <tr>
-        <th class="text-center">Purchase Date</th>
+        <th class="text-center" >Purchase Date</th>
         <th class="text-center">Invoice</th>
         <th class="text-center">Customer Root</th>
         <th class="text-center">Customer Leaf</th>
@@ -35,11 +149,11 @@
         <td>{{product.manafacturer}}</td>
         <td>{{product.quantity}}</td>
         <td>{{product.price}}</td>
-        <td>{{product.total}}</td>
+        <td>{{product.total}}</td> -->
           <!-- <td>
             <button type="button" class="btn btn-danger btn-sm" (click)="removeRequerimiento(requerimiento)">Delete</button>
           </td> -->
-      </tr>
+      <!-- </tr>
     </tbody>
-  </table>
+  </table> -->
 
